@@ -1,9 +1,0 @@
-zuul:
-  routes:
-    branch-service:
-      path: /branch-service/**
-      url: http://branch-service:8080
-
-    customers-service:
-      path: /customer-service/**
-      url: http://customer-service:8080
