@@ -1,0 +1,58 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: customer-service
+  labels:
+    name: customer-service
+spec:
+  ports:
+    - nodePort: 30165
+      port: 8080      
+      targetPort: 8080  
+      protocol: TCP
+  selector:           
+    app: customer-service
+  type: NodePort       
+
+---
+apiVersion: apps/v1 
+kind: Deployment    
+metadata:              
+  name: customer-service
+spec:                
+  selector:         
+    matchLabels:
+      app: customer-service
+  replicas: 3        
+  template:
+    metadata:
+      labels:        
+        app: customer-service
+    spec:
+      containers:
+        - name: customer-service
+          image: rkp/customer-service:1.0
+          ports:
+            - containerPort: 8080                
+          env:   # Setting Enviornmental Variables
+          - name: DB_HOST   # Setting Database host address from configMap
+            valueFrom: 
+              configMapKeyRef:
+                name: customer-db-conf  # name of configMap
+                key: host
+          - name: DB_NAME  # Setting Database name from configMap
+            valueFrom:
+              configMapKeyRef:
+                name: customer-db-conf
+                key: name
+          - name: DB_USERNAME  # Setting Database username from Secret
+            valueFrom:
+              secretKeyRef:
+                name: customer-db-credentials # Secret Name
+                key: username
+          - name: DB_PASSWORD # Setting Database password from Secret
+            valueFrom:
+              secretKeyRef:
+                name: customer-db-credentials
+                key: password     
+        

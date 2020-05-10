@@ -1,0 +1,10 @@
+com\test\api\filter\PreFilter.class
+com\test\api\dto\Visits.class
+com\test\api\filter\RouteFilter.class
+com\test\api\dto\PetType.class
+com\test\api\ApiGatewayApplication.class
+com\test\api\dto\OwnerDetails.class
+com\test\api\filter\ErrorFilter.class
+com\test\api\dto\VisitDetails.class
+com\test\api\filter\PostFilter.class
+com\test\api\dto\PetDetails.class

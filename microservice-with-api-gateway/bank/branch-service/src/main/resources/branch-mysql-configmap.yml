@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: branch-db-conf
+data:
+ host: branch-mysql
+ name: branch-service

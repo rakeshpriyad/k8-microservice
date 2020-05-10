@@ -1,0 +1,10 @@
+G:\JAVA\microservices\k8-microservice\microservice-with-api-gateway\bank\api-gateway\src\main\java\com\test\api\dto\PetDetails.java
+G:\JAVA\microservices\k8-microservice\microservice-with-api-gateway\bank\api-gateway\src\main\java\com\test\api\filter\ErrorFilter.java
+G:\JAVA\microservices\k8-microservice\microservice-with-api-gateway\bank\api-gateway\src\main\java\com\test\api\filter\PreFilter.java
+G:\JAVA\microservices\k8-microservice\microservice-with-api-gateway\bank\api-gateway\src\main\java\com\test\api\dto\VisitDetails.java
+G:\JAVA\microservices\k8-microservice\microservice-with-api-gateway\bank\api-gateway\src\main\java\com\test\api\ApiGatewayApplication.java
+G:\JAVA\microservices\k8-microservice\microservice-with-api-gateway\bank\api-gateway\src\main\java\com\test\api\dto\OwnerDetails.java
+G:\JAVA\microservices\k8-microservice\microservice-with-api-gateway\bank\api-gateway\src\main\java\com\test\api\dto\Visits.java
+G:\JAVA\microservices\k8-microservice\microservice-with-api-gateway\bank\api-gateway\src\main\java\com\test\api\filter\RouteFilter.java
+G:\JAVA\microservices\k8-microservice\microservice-with-api-gateway\bank\api-gateway\src\main\java\com\test\api\filter\PostFilter.java
+G:\JAVA\microservices\k8-microservice\microservice-with-api-gateway\bank\api-gateway\src\main\java\com\test\api\dto\PetType.java
