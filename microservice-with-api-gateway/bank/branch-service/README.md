@@ -1,6 +1,7 @@
 https://vocon-it.com/2018/11/19/single-node-kubernetes-cluster-1-installing-minikube-on-centos/
 
 Open powershell
+minikube config set memory 8192
 minikube start
 minikube docker-env
 minikube -p minikube docker-env | Invoke-Expression
