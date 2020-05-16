@@ -1,7 +1,8 @@
-sudo chmod 666 /var/run/docker.sock
+minikube config set memory 1292
 minikube config set driver docker
 minikube config set memory 12192
-eval $(docker-machine env default)
+minikube start
+kubectl describe nodes
 
 
 	Welcome2git12#
