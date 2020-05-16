@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.test.bank</groupId>
+	<artifactId>k8-bank-with-api-gateway-eureka</artifactId>
+	<version>1.1</version>
+	<packaging>pom</packaging>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <docker.image.exposed.port>8081</docker.image.exposed.port>
+        <docker.image.dockerfile.dir>${basedir}/../docker</docker.image.dockerfile.dir>
+		<spring-boot.version>2.2.1.RELEASE</spring-boot.version>
+		<spring-cloud.version>2.2.1.RELEASE</spring-cloud.version>
+        <maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
+    </properties>
+
+	<modules>
+		<module>branch-service</module>
+		<module>customer-service</module>
+		<module>discovery-service</module>
+		<module>api-gateway</module>
+    </modules>
+</project>
