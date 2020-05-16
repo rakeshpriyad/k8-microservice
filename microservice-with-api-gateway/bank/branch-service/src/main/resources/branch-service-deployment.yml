@@ -23,7 +23,7 @@ spec:
   selector:         
     matchLabels:
       app: branch-service
-  replicas: 3        
+  replicas: 1 #  more replicat will take more memory        
   template:
     metadata:
       labels:        

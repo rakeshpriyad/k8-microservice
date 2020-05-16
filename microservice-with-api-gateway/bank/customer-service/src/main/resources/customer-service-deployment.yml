@@ -23,7 +23,7 @@ spec:
   selector:         
     matchLabels:
       app: customer-service
-  replicas: 3        
+  replicas: 1 # more container takes more memory        
   template:
     metadata:
       labels:        
