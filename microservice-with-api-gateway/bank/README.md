@@ -1,8 +1,10 @@
 minikube config set memory 1292
-minikube config set cpus 2
-minikube config set vm-driver virtualbox
+minikube config set driver docker
+minikube config set memory 12192
 minikube start
 kubectl describe nodes
+
+
 
 
 1. Start the branch service
