@@ -5,7 +5,7 @@ minikube start
 kubectl describe nodes
 
 
-	Welcome2git12#
+
 
 1. Start the branch service
 2. Start the customer service
