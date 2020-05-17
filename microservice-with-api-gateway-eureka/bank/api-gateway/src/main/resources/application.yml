@@ -11,6 +11,5 @@ zuul:
 eureka:
   client:
     eureka-server-port: 8080
-    register-with-eureka: true
-    fetch-registry: true
-	  
+      register-with-eureka: true
+      fetch-registry: true

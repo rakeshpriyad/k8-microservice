@@ -14,9 +14,9 @@ spring:
             ddl-auto: create
 
 eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URL}
-  instance:
-    instanceId: ${spring.application.name}:${random.value}
-    preferIpAddress: true	
+    client:
+        serviceUrl:
+        defaultZone: ${EUREKA_URL}
+    instance:
+        instanceId: ${spring.application.name}:${random.value}
+        preferIpAddress: true

@@ -3,6 +3,12 @@ eval $(minikube -p minikube docker-env)
 BASE_DIR=/home/aayush/k8
 BANK_DIR=${BASE_DIR}/k8-microservice/microservice-with-api-gateway-eureka/bank
 B_SERVICE=${BANK_DIR}/branch-service
+kubectl delete deployments branch-service
+kubectl delete deployments customer-service
+kubectl delete deployments discovery-service
+kubectl delete deployments api-gateway-service
+
+
 cd ${B_SERVICE}
 docker build -t rkp/branch-service:1.0 .
 cd ${B_SERVICE}/src/main/resources
@@ -63,5 +69,7 @@ cd ${A_SERVICE}/src/main/resources
 #5. Deploy Api Gatewat service 
 kubectl apply -f api-gateway-deployment.yml
 
+kubectl get deployments
+kubectl get pods
 
 
