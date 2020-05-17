@@ -1,5 +1,5 @@
 BASE_DIR=/home/aayush/k8
-BANK_DIR=${BASE_DIR}/k8-microservice/microservice-with-api-gateway/bank
+BANK_DIR=${BASE_DIR}/k8-microservice/microservice-with-api-gateway-eureka/bank
 B_SERVICE=${BANK_DIR}/branch-service
 cd ${B_SERVICE}
 #docker build -t rkp/branch-service:1.0 .
