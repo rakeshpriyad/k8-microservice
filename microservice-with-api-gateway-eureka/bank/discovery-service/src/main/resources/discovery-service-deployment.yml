@@ -1,36 +1,37 @@
 kind: Service
 apiVersion: v1
 metadata:
-  name: api-gateway-service
+  name: discovery-service
   labels:
-    name: api-gateway-service
+    name: discovery-service
 spec:
   ports:
-    - nodePort: 30166
+    - nodePort: 30167
       port: 8080      
       targetPort: 8080  
       protocol: TCP
   selector:           
-    app: api-gateway-service
+    app: discovery-service
   type: NodePort       
 
 ---
 apiVersion: apps/v1 
 kind: Deployment    
 metadata:              
-  name: api-gateway-service
+  name: discovery-service
 spec:                
   selector:         
     matchLabels:
-      app: api-gateway-service
-  replicas: 1
+      app: discovery-service
+  replicas: 1 # more container takes more memory        
   template:
     metadata:
       labels:        
-        app: api-gateway-service
+        app: discovery-service
     spec:
       containers:
-        - name: api-gateway-service
-          image: rkp/api-gateway-service:1.0
+        - name: discovery-service
+          image: rkp/discovery-service:1.0
           ports:
             - containerPort: 8080                
+        

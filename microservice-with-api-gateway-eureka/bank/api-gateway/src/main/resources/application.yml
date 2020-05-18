@@ -2,15 +2,21 @@ zuul:
   routes:
     branch-service:
       path: /branch-service/**
-      url: http://branch-service:8080
+      serviceId: branch-service
+      stripPrefix: true
+      #url: http://branch-service:8080
 
     customers-service:
       path: /customer-service/**
-      url: http://customer-service:8080
+      serviceId: customer-service
+      stripPrefix: true
+      #url: http://customer-service:8080
 # To enable eureka client
 eureka:
   client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: ${EUREKA_URL}
     eureka-server-port: 8080
-    register-with-eureka: true
-    fetch-registry: true
-	  
+

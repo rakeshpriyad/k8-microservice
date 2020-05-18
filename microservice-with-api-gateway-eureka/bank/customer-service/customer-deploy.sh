@@ -1,5 +1,5 @@
 BASE_DIR=/home/aayush/k8
-BANK_DIR=${BASE_DIR}/k8-microservice/microservice-with-api-gateway/bank
+BANK_DIR=${BASE_DIR}/k8-microservice/microservice-with-api-gateway-eureka/bank
 
 # Deploy customer
 C_SERVICE=${BANK_DIR}/customer-service

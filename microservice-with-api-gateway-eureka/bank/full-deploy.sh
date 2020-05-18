@@ -1,6 +1,14 @@
+minikube docker-env
+eval $(minikube -p minikube docker-env)
 BASE_DIR=/home/aayush/k8
-BANK_DIR=${BASE_DIR}/k8-microservice/microservice-with-api-gateway/bank
+BANK_DIR=${BASE_DIR}/k8-microservice/microservice-with-api-gateway-eureka/bank
 B_SERVICE=${BANK_DIR}/branch-service
+kubectl delete deployments branch-service
+kubectl delete deployments customer-service
+kubectl delete deployments discovery-service
+kubectl delete deployments api-gateway-service
+
+
 cd ${B_SERVICE}
 docker build -t rkp/branch-service:1.0 .
 cd ${B_SERVICE}/src/main/resources
@@ -43,13 +51,25 @@ kubectl apply -f customer-mysql-deployment.yml
 #4. Deploy customer service 
 kubectl apply -f customer-service-deployment.yml
 
-#3. Deploy Api Gateway
+#3. Deploy Discovery Gateway
+D_SERVICE=${BANK_DIR}/discovery-service
+cd ${D_SERVICE}
+
+docker build -t rkp/discovery-service:1.0 .
+cd ${D_SERVICE}/src/main/resources
+
+#4. Deploy Api gateway service
+kubectl apply -f discovery-service-deployment.yml
+
 A_SERVICE=${BANK_DIR}/api-gateway
 cd ${A_SERVICE}
 
 docker build -t rkp/api-gateway-service:1.0 .
 cd ${A_SERVICE}/src/main/resources
-
-
-#4. Deploy Api Gatewat service 
+#5. Deploy Api Gatewat service 
 kubectl apply -f api-gateway-deployment.yml
+
+kubectl get deployments
+kubectl get pods
+
+

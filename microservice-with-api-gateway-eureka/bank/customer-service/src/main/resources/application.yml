@@ -13,9 +13,12 @@ spring:
         hibernate:
             ddl-auto: create
 eureka:
-  client:
-    serviceUrl:
-      defaultZone: ${EUREKA_URL}
-  instance:
-    instanceId: ${spring.application.name}:${random.value}
-    preferIpAddress: true
+    client:
+        registerWithEureka: true
+        fetchRegistry: true
+        serviceUrl:
+            defaultZone: ${EUREKA_URL}
+        eureka-server-port: 8080
+    instance:
+        instanceId: ${spring.application.name}:${random.value}
+        preferIpAddress: true
