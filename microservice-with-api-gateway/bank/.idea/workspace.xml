@@ -1,7 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0de20e1c-e6cb-4c1b-bb40-b89e55692c50" name="Default Changelist" comment="" />
+    <list default="true" id="0de20e1c-e6cb-4c1b-bb40-b89e55692c50" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../programs/src/main/java/com/test/prog/arrays/EquilibruimPointDemo.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../programs/src/main/java/com/test/prog/arrays/LeadersInArray.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../programs/src/main/java/com/test/prog/arrays/MyEquuibiliriumFun.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../programs/src/main/java/com/test/prog/arrays/PythagorianTripplet.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../programs/src/main/java/com/test/prog/arrays/ReverseArrayInGroup.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../programs/src/main/java/com/test/prog/arrays/TrapWater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -9,6 +21,17 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
@@ -21,6 +44,7 @@
     <option name="version" value="1" />
   </component>
   <component name="ProjectId" id="1bfcVFmE7a7bqS3MwfbtSvnlpaK" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
@@ -28,7 +52,10 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/api-gateway/src/main/resources" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../programs" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.15" />
+    <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -42,7 +69,7 @@
       <recent name="G:\JAVA\microservices\k8-microservice\microservice-with-api-gateway\bank\api-gateway-without-discovery" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ApiGatewayApplication">
+  <component name="RunManager" selected="Application.TrapWater">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -50,13 +77,13 @@
       <module />
       <method />
     </configuration>
-    <configuration name="ApiGatewayApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.test.api.ApiGatewayApplication" />
-      <module name="api-gateway-without-discovery" />
+    <configuration name="EquilibruimPointDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test.prog.arrays.EquilibruimPointDemo" />
+      <module name="programs" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.test.api.*" />
+          <option name="PATTERN" value="com.test.prog.arrays.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -64,13 +91,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BranchServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.test.bank.branch.BranchServiceApplication" />
-      <module name="branch-service" />
+    <configuration name="LeadersInArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test.prog.arrays.LeadersInArray" />
+      <module name="programs" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.test.bank.branch.*" />
+          <option name="PATTERN" value="com.test.prog.arrays.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -78,13 +105,41 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="CustomersServiceApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.test.bank.branch.CustomersServiceApplication" />
-      <module name="spring-bank-customers-service" />
+    <configuration name="PythagorianTripplet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test.prog.arrays.PythagorianTripplet" />
+      <module name="programs" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.test.bank.branch.*" />
+          <option name="PATTERN" value="com.test.prog.arrays.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ReverseArrayInGroup" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test.prog.arrays.ReverseArrayInGroup" />
+      <module name="programs" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.prog.arrays.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TrapWater" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test.prog.arrays.TrapWater" />
+      <module name="programs" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.test.prog.arrays.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -105,6 +160,58 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/../../programs" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <configuration name="programs [clean,install]" type="MavenRunConfiguration" factoryName="Maven" nameIsGenerated="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="clean" />
+                <option value="install" />
+              </list>
+            </option>
+            <option name="pomFileName" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$/../../programs" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="TestNG">
       <option name="TEST_OBJECT" value="CLASS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -123,11 +230,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.EquilibruimPointDemo" />
+      <item itemvalue="Application.LeadersInArray" />
+      <item itemvalue="Application.PythagorianTripplet" />
+      <item itemvalue="Application.ReverseArrayInGroup" />
+      <item itemvalue="Application.TrapWater" />
+      <item itemvalue="Maven.programs [clean,install]" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ApiGatewayApplication" />
-        <item itemvalue="Application.CustomersServiceApplication" />
-        <item itemvalue="Application.BranchServiceApplication" />
+        <item itemvalue="Application.TrapWater" />
+        <item itemvalue="Application.ReverseArrayInGroup" />
+        <item itemvalue="Application.PythagorianTripplet" />
+        <item itemvalue="Application.LeadersInArray" />
+        <item itemvalue="Application.EquilibruimPointDemo" />
       </list>
     </recent_temporary>
   </component>
@@ -148,26 +265,74 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1286" height="155" key="GridCell.Tab.0.bottom" timestamp="1589033891323">
+    <state x="409" y="31" width="560" height="666" key="#EquilibruimPointDemo_(1)" timestamp="1589878458751">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1286" height="155" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589033891323" />
-    <state width="1286" height="155" key="GridCell.Tab.0.center" timestamp="1589033891323">
+    <state x="409" y="31" width="560" height="666" key="#EquilibruimPointDemo_(1)/0.0.1366.728@0.0.1366.728" timestamp="1589878458751" />
+    <state x="275" y="24" key="#Notifications" timestamp="1589966368766">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1286" height="155" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589033891323" />
-    <state width="1286" height="155" key="GridCell.Tab.0.left" timestamp="1589033891323">
+    <state x="275" y="24" key="#Notifications/0.0.1366.728@0.0.1366.728" timestamp="1589966368766" />
+    <state x="137" y="2" width="1092" height="726" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589878633436">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1286" height="155" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589033891323" />
-    <state width="1286" height="155" key="GridCell.Tab.0.right" timestamp="1589033891323">
+    <state x="137" y="2" width="1092" height="726" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1366.728@0.0.1366.728" timestamp="1589878633436" />
+    <state x="418" y="152" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1589878457565">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1286" height="155" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589033891323" />
-    <state x="390" y="190" key="com.intellij.ide.util.TipDialog" timestamp="1589089383171">
+    <state x="418" y="152" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1366.728@0.0.1366.728" timestamp="1589878457565" />
+    <state width="387" height="466" key="DebuggerActiveHint" timestamp="1589884172905">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="190" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1589089383171" />
+    <state width="387" height="466" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1589884172905" />
+    <state x="463" y="75" key="FileChooserDialogImpl" timestamp="1589878601164">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="463" y="75" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589878601164" />
+    <state width="1322" height="217" key="GridCell.Tab.0.bottom" timestamp="1589966205791">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="217" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589966205791" />
+    <state width="1322" height="217" key="GridCell.Tab.0.center" timestamp="1589966205791">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="217" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589966205791" />
+    <state width="1322" height="217" key="GridCell.Tab.0.left" timestamp="1589966205791">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="217" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589966205791" />
+    <state width="1322" height="217" key="GridCell.Tab.0.right" timestamp="1589966205791">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="217" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589966205791" />
+    <state width="1322" height="217" key="GridCell.Tab.1.bottom" timestamp="1589966205791">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="217" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589966205791" />
+    <state width="1322" height="217" key="GridCell.Tab.1.center" timestamp="1589966205791">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="217" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1589966205791" />
+    <state width="1322" height="217" key="GridCell.Tab.1.left" timestamp="1589966205791">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="217" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1589966205791" />
+    <state width="1322" height="217" key="GridCell.Tab.1.right" timestamp="1589966205791">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state width="1322" height="217" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1589966205791" />
+    <state x="350" y="67" key="NewModule_or_Project.wizard" timestamp="1589878500615">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="350" y="67" key="NewModule_or_Project.wizard/0.0.1366.728@0.0.1366.728" timestamp="1589878500615" />
+    <state x="163" y="0" key="SettingsEditor" timestamp="1589878331861">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1589878331861" />
+    <state x="390" y="190" key="com.intellij.ide.util.TipDialog" timestamp="1589966352895">
+      <screen x="0" y="0" width="1366" height="728" />
+    </state>
+    <state x="390" y="190" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1589966352895" />
     <state x="328" y="91" width="709" height="546" key="find.popup" timestamp="1589091617813">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -184,6 +349,16 @@
           <url>file://$PROJECT_DIR$/api-gateway/src/main/java/com/test/api/ApiGatewayApplication.java</url>
           <line>32</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../../programs/src/main/java/com/test/prog/arrays/PythagorianTripplet.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="12" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../../programs/src/main/java/com/test/prog/arrays/ReverseArrayInGroup.java</url>
+          <line>13</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
