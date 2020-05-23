@@ -1,0 +1,30 @@
+version: "3"
+services:
+  config:
+    image: "rkp/config-server:latest"
+    ports:
+      - "8888:8888"
+  eureka:
+    image: "rkp/eureka-server:latest"
+    environment:
+      - "SPRING_EUREKA=http://eureka:8761/eureka"
+      - "SPRING_CLOUD_CONFIG_URI=http://config:8888"
+    ports:
+      - "8761:8761"
+  zuul:
+    image: "rkp/zuul-server:latest"
+    environment:
+      - "SPRING_EUREKA=http://eureka:8761/eureka"
+      - "SPRING_CLOUD_CONFIG_URI=http://config:8888"
+    ports:
+      - "8050:8050"
+  customer:
+    image: "rkp/customer-service:latest"
+    environment:
+      - "JAVA_OPTS=-Djava.security.egd=file:/dev/./urandom"
+      - "SPRING_PROFILES_ACTIVE=default"
+      - "SPRING_EUREKA=http://eureka:8761/eureka"
+      - "SPRING_CLOUD_CONFIG_URI=http://config:8888"
+    ports:
+      - "8100:8100"
+  

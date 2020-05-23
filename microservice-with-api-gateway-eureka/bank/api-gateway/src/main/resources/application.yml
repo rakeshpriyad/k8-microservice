@@ -1,24 +1,32 @@
 zuul:
+  prefix: /api
+  ignoredServices: '*'
   routes:
     #branch-service:
     #  path: /branch-service/**
     #  serviceId: branch-service
     #  stripPrefix: true
       #url: http://branch-service:8080
-
-    customers-service:
-      path: /customer-service/**
-      serviceId: customer-service
-      stripPrefix: false
+    customers-service:/customer/**
+    api-gateway: /gateway/**
+    #customers-service:
+    #  path: /customer-service/**
+    #  serviceId: customer-service
+    #  stripPrefix: false
       #url: http://customer-service:8080
 # To enable eureka client
 eureka:
   client:
-    registerWithEureka: false
-    fetchRegistry: true
     serviceUrl:
-      defaultZone: ${EUREKA_URL} #${EUREKA_URI:http://eureka-server:8080/eureka}
-  instance:
-    instanceId: ${spring.application.name}:${random.value}
-    preferIpAddress: true
+      defaultZone: http://discovery-server:8761/eureka/
+      
+#eureka:
+#  client:
+#    registerWithEureka: false
+#    fetchRegistry: true
+#    serviceUrl:
+#      defaultZone: ${EUREKA_URL} #${EUREKA_URI:http://eureka-server:8080/eureka}
+#  instance:
+#    instanceId: ${spring.application.name}:${random.value}
+#    preferIpAddress: true
 

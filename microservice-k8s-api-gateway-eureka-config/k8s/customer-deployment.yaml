@@ -1,0 +1,53 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: customer-service
+spec:
+  selector:
+    matchLabels:
+      component: customer
+  replicas: 1 # more container takes more memory        
+  template:
+    metadata:
+      labels:
+        app: customer-service
+    spec:
+      containers:
+        - name: customer-service
+          image: rkp/customer-service:1.0
+          requests:
+            memory: "256Mi"
+          limits:
+            memory: "512Mi"
+        ports:
+        - containerPort: 8100
+        env:   # Setting Enviornmental Variables
+        - name: JAVA_OPTS
+        value: -Djava.security.egd=file:/dev/./urandom
+        - name: SPRING_CLOUD_CONFIG_URI
+        value: http://config-server-cluster-ip-service:8888
+        - name: SPRING_EUREKA
+        value: http://eureka-cluster-ip-service:8761/eureka
+        - name: SPRING_PROFILES_ACTIVE
+          value: default
+        - name: DB_HOST   # Setting Database host address from configMap
+          valueFrom: 
+            configMapKeyRef:
+              name: customer-db-conf  # name of configMap
+              key: host
+        - name: DB_NAME  # Setting Database name from configMap
+          valueFrom:
+            configMapKeyRef:
+              name: customer-db-conf
+              key: name
+        - name: DB_USERNAME  # Setting Database username from Secret
+          valueFrom:
+            secretKeyRef:
+              name: customer-db-credentials # Secret Name
+              key: username
+        - name: DB_PASSWORD # Setting Database password from Secret
+          valueFrom:
+            secretKeyRef:
+              name: customer-db-credentials
+              key: password     
+      		  
