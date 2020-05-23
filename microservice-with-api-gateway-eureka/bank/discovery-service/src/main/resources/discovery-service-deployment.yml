@@ -6,13 +6,13 @@ metadata:
     name: discovery-service
 spec:
   ports:
-    - nodePort: 30167
+    - #nodePort: 30167
       port: 8080      
       targetPort: 8080  
       protocol: TCP
   selector:           
     app: discovery-service
-  type: NodePort       
+  type: LoadBalancer
 
 ---
 apiVersion: apps/v1 
