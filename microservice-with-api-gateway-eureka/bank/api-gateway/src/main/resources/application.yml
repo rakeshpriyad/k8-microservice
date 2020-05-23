@@ -4,8 +4,9 @@ zuul:
   routes:
     customer-service:
       path: /api/customer-service/**
-      serviceId: customer-service
-      stripPrefix: true
+      #serviceId: customer-service
+      #stripPrefix: true
+      url: http://customer-service:8080
     #api-gateway: /gateway/**
 
 #zuul:
