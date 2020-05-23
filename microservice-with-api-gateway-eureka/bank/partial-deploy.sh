@@ -4,35 +4,35 @@ eval $(minikube -p minikube docker-env)
 BASE_DIR=/home/aayush/k8
 BANK_DIR=${BASE_DIR}/k8-microservice/microservice-with-api-gateway-eureka/bank
 B_SERVICE=${BANK_DIR}/branch-service
-kubectl delete deployments branch-service
-kubectl delete deployments customer-service
-kubectl delete deployments discovery-service
-kubectl delete deployments api-gateway-service
+#kubectl delete deployments branch-service 2>/dev/null || echo "No more branch-service deployment"
+kubectl delete deployments customer-service 2>/dev/null || echo "No more customer-service deployment to remove."
+kubectl delete deployments discovery-service 2>/dev/null || echo "No more branch-service deployment to remove."
+kubectl delete deployments api-gateway-service 2>/dev/null || echo "No more api-gateway-service image to remove."
 docker rmi $(docker images | grep branch-service | awk '{print $3}') 2>/dev/null || echo "No more branch-service image to remove."
 docker rmi $(docker images | grep customer-service | awk '{print $3}') 2>/dev/null || echo "No more customer-service image to remove."
 docker rmi $(docker images | grep discovery-service | awk '{print $3}') 2>/dev/null || echo "No more discovery-service image to remove."
 docker rmi $(docker images | grep api-gateway-service | awk '{print $3}') 2>/dev/null || echo "No more api-gateway-service image to remove."
 
 
-cd ${B_SERVICE}
-docker build -t rkp/branch-service:1.0 .
-cd ${B_SERVICE}/src/main/resources
+#cd ${B_SERVICE}
+#docker build -t rkp/branch-service:1.0 .
+#cd ${B_SERVICE}/src/main/resources
 
 #a. Deploy configmap 
-kubectl apply -f branch-mysql-configmap.yml
+#kubectl apply -f branch-mysql-configmap.yml
 #kubectl get configmap
 #b. Create credentials
-kubectl apply -f branch-mysqldb-credentials.yml
-kubectl apply -f branch-mysqldb-root-credentials.yml
+#kubectl apply -f branch-mysqldb-credentials.yml
+#kubectl apply -f branch-mysqldb-root-credentials.yml
 
 #kubectl get secrets
 
 #c. Deploy mysql
-kubectl apply -f branch-mysql-deployment.yml
+#kubectl apply -f branch-mysql-deployment.yml
 #kubectl describe pods <pod id>
 #kubectl get deployments
 #d. deploy branch service
-kubectl apply -f branch-service-deployment.yml
+#kubectl apply -f branch-service-deployment.yml
 
 #2. Deploy customer
 C_SERVICE=${BANK_DIR}/customer-service
