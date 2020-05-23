@@ -12,12 +12,18 @@ spring:
         show-sql: true
         hibernate:
             ddl-auto: create
+#eureka:
+#    client:
+#        registerWithEureka: true
+#        fetchRegistry: true
+#        serviceUrl:
+#            defaultZone: ${EUREKA_URL} #${EUREKA_URI:http://eureka-server:8080/eureka}
+#    instance:
+#        instanceId: ${spring.application.name}:${random.value}
+#        preferIpAddress: true
+
+# To enable eureka client
 eureka:
-    client:
-        registerWithEureka: true
-        fetchRegistry: true
-        serviceUrl:
-            defaultZone: ${EUREKA_URL} #${EUREKA_URI:http://eureka-server:8080/eureka}
-    instance:
-        instanceId: ${spring.application.name}:${random.value}
-        preferIpAddress: true
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-service:8761/eureka/
