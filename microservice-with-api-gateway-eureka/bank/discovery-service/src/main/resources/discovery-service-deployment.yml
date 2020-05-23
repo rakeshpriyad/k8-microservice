@@ -7,8 +7,8 @@ metadata:
 spec:
   ports:
     - #nodePort: 30167
-      port: 8080      
-      targetPort: 8080  
+      port: 8761      
+      targetPort: 8761  
       protocol: TCP
   selector:           
     app: discovery-service
