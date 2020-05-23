@@ -3,8 +3,9 @@ zuul:
   ignoredServices: '*'
   routes:
     customer-service:
-      path: /customer-service/**
+      path: /api/customer-service/**
       serviceId: customer-service
+      stripPrefix: false
     #api-gateway: /gateway/**
 
 #zuul:

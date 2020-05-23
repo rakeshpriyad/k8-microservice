@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="0de20e1c-e6cb-4c1b-bb40-b89e55692c50" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../../programs/src/main/java/com/test/prog/arrays/EquilibruimPointDemo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../programs/src/main/java/com/test/prog/arrays/LeadersInArray.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../programs/src/main/java/com/test/prog/arrays/MyEquuibiliriumFun.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../programs/src/main/java/com/test/prog/arrays/PythagorianTripplet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../programs/src/main/java/com/test/prog/arrays/ReverseArrayInGroup.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../programs/src/main/java/com/test/prog/arrays/TrapWater.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../microservice-with-api-gateway-eureka/bank/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../microservice-with-api-gateway-eureka/bank/api-gateway/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../microservice-with-api-gateway-eureka/bank/discovery-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../../microservice-with-api-gateway-eureka/bank/discovery-service/Dockerfile" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,7 +61,7 @@
       <recent name="G:\JAVA\microservices\k8-microservice\microservice-with-api-gateway\bank\api-gateway-without-discovery" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TrapWater">
+  <component name="RunManager" selected="Application.LinkedListDemo">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="WIDTH" value="400" />
       <option name="HEIGHT" value="300" />
@@ -77,8 +69,8 @@
       <module />
       <method />
     </configuration>
-    <configuration name="EquilibruimPointDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.test.prog.arrays.EquilibruimPointDemo" />
+    <configuration name="BuySellStockProfit" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test.prog.arrays.BuySellStockProfit" />
       <module name="programs" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -91,8 +83,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="LeadersInArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.test.prog.arrays.LeadersInArray" />
+    <configuration name="CountSubArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test.prog.arrays.CountSubArray" />
       <module name="programs" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -105,13 +97,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PythagorianTripplet" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.test.prog.arrays.PythagorianTripplet" />
+    <configuration name="LinkedList" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test.prog.ll.LinkedList" />
       <module name="programs" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.test.prog.arrays.*" />
+          <option name="PATTERN" value="com.test.prog.ll.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -119,13 +111,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ReverseArrayInGroup" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.test.prog.arrays.ReverseArrayInGroup" />
+    <configuration name="LinkedListDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test.prog.ll.LinkedListDemo" />
       <module name="programs" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.test.prog.arrays.*" />
+          <option name="PATTERN" value="com.test.prog.ll.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -133,8 +125,8 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="TrapWater" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.test.prog.arrays.TrapWater" />
+    <configuration name="RearrangeArray" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.test.prog.arrays.RearrangeArray" />
       <module name="programs" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -231,20 +223,20 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.EquilibruimPointDemo" />
-      <item itemvalue="Application.LeadersInArray" />
-      <item itemvalue="Application.PythagorianTripplet" />
-      <item itemvalue="Application.ReverseArrayInGroup" />
-      <item itemvalue="Application.TrapWater" />
+      <item itemvalue="Application.BuySellStockProfit" />
+      <item itemvalue="Application.RearrangeArray" />
+      <item itemvalue="Application.CountSubArray" />
+      <item itemvalue="Application.LinkedList" />
+      <item itemvalue="Application.LinkedListDemo" />
       <item itemvalue="Maven.programs [clean,install]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TrapWater" />
-        <item itemvalue="Application.ReverseArrayInGroup" />
-        <item itemvalue="Application.PythagorianTripplet" />
-        <item itemvalue="Application.LeadersInArray" />
-        <item itemvalue="Application.EquilibruimPointDemo" />
+        <item itemvalue="Application.LinkedListDemo" />
+        <item itemvalue="Application.LinkedList" />
+        <item itemvalue="Application.CountSubArray" />
+        <item itemvalue="Application.RearrangeArray" />
+        <item itemvalue="Application.BuySellStockProfit" />
       </list>
     </recent_temporary>
   </component>
@@ -285,26 +277,26 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="387" height="466" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1589884172905" />
-    <state x="463" y="75" key="FileChooserDialogImpl" timestamp="1589878601164">
+    <state x="463" y="75" key="FileChooserDialogImpl" timestamp="1590207717080">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="75" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1589878601164" />
-    <state width="1322" height="217" key="GridCell.Tab.0.bottom" timestamp="1589966205791">
+    <state x="463" y="75" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590207717080" />
+    <state width="1322" height="172" key="GridCell.Tab.0.bottom" timestamp="1590207751689">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="217" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1589966205791" />
-    <state width="1322" height="217" key="GridCell.Tab.0.center" timestamp="1589966205791">
+    <state width="1322" height="172" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1590207751689" />
+    <state width="1322" height="172" key="GridCell.Tab.0.center" timestamp="1590207751689">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="217" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1589966205791" />
-    <state width="1322" height="217" key="GridCell.Tab.0.left" timestamp="1589966205791">
+    <state width="1322" height="172" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1590207751689" />
+    <state width="1322" height="172" key="GridCell.Tab.0.left" timestamp="1590207751689">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="217" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1589966205791" />
-    <state width="1322" height="217" key="GridCell.Tab.0.right" timestamp="1589966205791">
+    <state width="1322" height="172" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1590207751689" />
+    <state width="1322" height="172" key="GridCell.Tab.0.right" timestamp="1590207751689">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1322" height="217" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1589966205791" />
+    <state width="1322" height="172" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1590207751689" />
     <state width="1322" height="217" key="GridCell.Tab.1.bottom" timestamp="1589966205791">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -321,18 +313,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1322" height="217" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1589966205791" />
-    <state x="350" y="67" key="NewModule_or_Project.wizard" timestamp="1589878500615">
+    <state x="350" y="67" key="NewModule_or_Project.wizard" timestamp="1590207719659">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="350" y="67" key="NewModule_or_Project.wizard/0.0.1366.728@0.0.1366.728" timestamp="1589878500615" />
+    <state x="350" y="67" key="NewModule_or_Project.wizard/0.0.1366.728@0.0.1366.728" timestamp="1590207719659" />
     <state x="163" y="0" key="SettingsEditor" timestamp="1589878331861">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1589878331861" />
-    <state x="390" y="190" key="com.intellij.ide.util.TipDialog" timestamp="1589966352895">
+    <state x="390" y="190" key="com.intellij.ide.util.TipDialog" timestamp="1590237915727">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="190" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1589966352895" />
+    <state x="390" y="190" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1590237915727" />
     <state x="328" y="91" width="709" height="546" key="find.popup" timestamp="1589091617813">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
