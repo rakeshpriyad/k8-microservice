@@ -1,9 +1,11 @@
 zuul:
-  prefix: /api
+ # prefix: /api
   ignoredServices: '*'
   routes:
-    customer-service: /customer/**
-    api-gateway: /gateway/**
+    customer-service:
+      path: /customer-service/**
+      serviceId: customer-service
+    #api-gateway: /gateway/**
 
 #zuul:
 #  prefix: /api
@@ -16,7 +18,7 @@ zuul:
       #url: http://branch-service:8080
     #customers-service:/customer/**
     #api-gateway: /gateway/**
-    #customers-service:
+    #customer-service:
     #  path: /customer-service/**
     #  serviceId: customer-service
     #  stripPrefix: false
