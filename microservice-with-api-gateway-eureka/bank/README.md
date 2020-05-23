@@ -1,3 +1,8 @@
+kubectl get pods --namespace=kube-system -l k8s-app=kube-dns
+#to see dns log
+for p in $(kubectl get pods --namespace=kube-system -l k8s-app=kube-dns -o name); do kubectl logs --namespace=kube-system $p; done
+
+
 minikube config set memory 1292
 minikube config set driver docker
 minikube config set memory 12192
