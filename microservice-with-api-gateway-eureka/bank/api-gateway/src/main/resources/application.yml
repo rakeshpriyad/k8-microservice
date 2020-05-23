@@ -5,7 +5,7 @@ zuul:
     customer-service:
       path: /api/customer-service/**
       serviceId: customer-service
-      stripPrefix: false
+      stripPrefix: true
     #api-gateway: /gateway/**
 
 #zuul:
