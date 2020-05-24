@@ -2,7 +2,7 @@
 minikube docker-env
 eval $(minikube -p minikube docker-env)
 BASE_DIR=/home/aayush/k8
-BANK_DIR=${BASE_DIR}/k8-microservice/microservice-with-api-gateway-eureka/bank
+BANK_DIR=${BASE_DIR}/k8-microservice/microservice-with-api-gateway-eureka-ribbon/bank
 B_SERVICE=${BANK_DIR}/branch-service
 kubectl delete deployments branch-service
 kubectl delete deployments customer-service
