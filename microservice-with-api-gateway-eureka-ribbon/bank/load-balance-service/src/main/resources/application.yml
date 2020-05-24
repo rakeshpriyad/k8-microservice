@@ -1,0 +1,13 @@
+#https://github.com/luizkowalski/microservices-netflix-sample/blob/master/contacts/src/main/resources/application.yml
+server:
+  port: 8761
+  ribbon:
+    eureka:
+	  enabled: true
+    #listOfServers: localhost:9090,localhost:9091,localhost:9092
+    ServerListRefreshInterval: 1000
+#logging.level.root=TRACE  
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-service:8761/eureka/

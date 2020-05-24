@@ -1,0 +1,37 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: load-balance-service
+  labels:
+    name: load-balance-service
+spec:
+  ports:
+    - nodePort: 30168
+      port: 8080      
+      targetPort: 8080  
+      protocol: TCP
+  selector:           
+    app: load-balance-service
+  type: NodePort
+
+---
+apiVersion: apps/v1 
+kind: Deployment    
+metadata:              
+  name: load-balance-service
+spec:                
+  selector:         
+    matchLabels:
+      app: load-balance-service
+  replicas: 1 # more container takes more memory        
+  template:
+    metadata:
+      labels:        
+        app: load-balance-service
+    spec:
+      containers:
+        - name: load-balance-service
+          image: rkp/load-balance-service:1.0
+          ports:
+            - containerPort: 8080                
+        
