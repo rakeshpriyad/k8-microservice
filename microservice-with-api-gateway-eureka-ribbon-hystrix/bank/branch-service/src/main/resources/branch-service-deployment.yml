@@ -1,0 +1,58 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: branch-service
+  labels:
+    name: branch-service
+spec:
+  ports:
+    - nodePort: 30164
+      port: 8080      
+      targetPort: 8080  
+      protocol: TCP
+  selector:           
+    app: branch-service
+  type: NodePort       
+
+---
+apiVersion: apps/v1 
+kind: Deployment    
+metadata:              
+  name: branch-service
+spec:                
+  selector:         
+    matchLabels:
+      app: branch-service
+  replicas: 1 #  more replicat will take more memory        
+  template:
+    metadata:
+      labels:        
+        app: branch-service
+    spec:
+      containers:
+        - name: branch-service
+          image: rkp/branch-service:1.0
+          ports:
+            - containerPort: 8080                
+          env:   # Setting Enviornmental Variables
+          - name: DB_HOST   # Setting Database host address from configMap
+            valueFrom: 
+              configMapKeyRef:
+                name: branch-db-conf  # name of configMap
+                key: host
+          - name: DB_NAME  # Setting Database name from configMap
+            valueFrom:
+              configMapKeyRef:
+                name: branch-db-conf
+                key: name
+          - name: DB_USERNAME  # Setting Database username from Secret
+            valueFrom:
+              secretKeyRef:
+                name: branch-db-credentials # Secret Name
+                key: username
+          - name: DB_PASSWORD # Setting Database password from Secret
+            valueFrom:
+              secretKeyRef:
+                name: branch-db-credentials
+                key: password     
+        

@@ -1,0 +1,9 @@
+zuul:
+  routes:
+    branch-service:
+      path: /branch-service/**
+      url: http://localhost:8070
+
+    customers-service:
+      path: /customer-service/**
+      url: http://localhost:8090
