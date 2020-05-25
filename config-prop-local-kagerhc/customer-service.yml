@@ -3,7 +3,7 @@ spring:
         driver-class-name: com.mysql.cj.jdbc.Driver
         url: jdbc:mysql://localhost:3306/bnkmicroservice?allowPublicKeyRetrieval=true&useSSL=FALSE
         username: root
-        password: roog
+        password: root
         hikari:
             initialization-fail-timeout: 0        
     jpa:
