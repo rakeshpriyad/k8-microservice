@@ -1,0 +1,16 @@
+server:
+  port: 8080
+  
+zuul:
+  ignoredServices: '*'
+  routes:
+    customer-service:
+      path: /api/customer-service/**
+      url: http://customer-service:8082
+
+# To enable eureka client
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-service:8761/eureka/
+     

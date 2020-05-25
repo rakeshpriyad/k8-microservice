@@ -1,0 +1,29 @@
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/bnkmicroservice?allowPublicKeyRetrieval=true&useSSL=FALSE
+        username: root
+        password: roog
+        hikari:
+            initialization-fail-timeout: 0        
+    jpa:
+        database-platform: org.hibernate.dialect.MySQL5Dialect
+        generate-ddl: true
+        show-sql: true
+        hibernate:
+            ddl-auto: create
+#eureka:
+#    client:
+#        registerWithEureka: true
+#        fetchRegistry: true
+#        serviceUrl:
+#            defaultZone: ${EUREKA_URL} #${EUREKA_URI:http://eureka-server:8080/eureka}
+#    instance:
+#        instanceId: ${spring.application.name}:${random.value}
+#        preferIpAddress: true
+
+# To enable eureka client
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://discovery-service:8761/eureka/
