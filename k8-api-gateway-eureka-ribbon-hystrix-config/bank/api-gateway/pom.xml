@@ -5,7 +5,7 @@
 
 	<parent>
 		<groupId>com.test.bank</groupId>
-		<artifactId>k8-bank-with-api-gateway-eureka-ribbon-hystrix</artifactId>
+		<artifactId>k8-api-gateway-eureka-ribbon-hystrix-config</artifactId>
 		<version>1.1</version>
 	</parent>
     <groupId>com.test.bank.api.gateway</groupId>
