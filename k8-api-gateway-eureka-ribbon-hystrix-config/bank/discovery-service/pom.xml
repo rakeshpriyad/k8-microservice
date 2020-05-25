@@ -33,7 +33,13 @@
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-server</artifactId>
-			<version>${spring-boot.version}</version>
+            <version>${spring-cloud.version}</version>
+            <exclusions>
+                <exclusion>
+                    <groupId>javax.servlet</groupId>
+                    <artifactId>servlet-api</artifactId>
+                </exclusion>
+            </exclusions>
         </dependency>
 
 		<!-- Spring boot admin start -->
@@ -99,6 +105,17 @@
             <artifactId>jackson-annotations</artifactId>
             <version>2.9.4</version>
         </dependency>
+       <!-- <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-tomcat</artifactId>
+            <scope>provided</scope>
+            <version>${spring-boot.version}</version>
+        </dependency>-->
+        <!--<dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>javax.servlet-api</artifactId>
+            <version>3.1.0</version>
+        </dependency>-->
     </dependencies>
 	<build>
         <finalName>${project.artifactId}</finalName>

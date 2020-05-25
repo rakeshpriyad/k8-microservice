@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0de20e1c-e6cb-4c1b-bb40-b89e55692c50" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../microservice-with-api-gateway-eureka/bank/api-gateway/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../../microservice-with-api-gateway-eureka/bank/api-gateway/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../microservice-with-api-gateway-eureka/bank/discovery-service/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/../../microservice-with-api-gateway-eureka/bank/discovery-service/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="0de20e1c-e6cb-4c1b-bb40-b89e55692c50" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -277,10 +273,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="387" height="466" key="DebuggerActiveHint/0.0.1366.728@0.0.1366.728" timestamp="1589884172905" />
-    <state x="463" y="75" key="FileChooserDialogImpl" timestamp="1590207717080">
+    <state x="463" y="75" key="FileChooserDialogImpl" timestamp="1590302267224">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="75" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590207717080" />
+    <state x="463" y="75" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1590302267224" />
     <state width="1322" height="172" key="GridCell.Tab.0.bottom" timestamp="1590207751689">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -313,18 +309,18 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1322" height="217" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1589966205791" />
-    <state x="350" y="67" key="NewModule_or_Project.wizard" timestamp="1590207719659">
+    <state x="350" y="67" key="NewModule_or_Project.wizard" timestamp="1590302276117">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="350" y="67" key="NewModule_or_Project.wizard/0.0.1366.728@0.0.1366.728" timestamp="1590207719659" />
+    <state x="350" y="67" key="NewModule_or_Project.wizard/0.0.1366.728@0.0.1366.728" timestamp="1590302276117" />
     <state x="163" y="0" key="SettingsEditor" timestamp="1589878331861">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="163" y="0" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1589878331861" />
-    <state x="390" y="190" key="com.intellij.ide.util.TipDialog" timestamp="1590237915727">
+    <state x="390" y="190" key="com.intellij.ide.util.TipDialog" timestamp="1590302240933">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="390" y="190" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1590237915727" />
+    <state x="390" y="190" key="com.intellij.ide.util.TipDialog/0.0.1366.728@0.0.1366.728" timestamp="1590302240933" />
     <state x="328" y="91" width="709" height="546" key="find.popup" timestamp="1589091617813">
       <screen x="0" y="0" width="1366" height="728" />
     </state>

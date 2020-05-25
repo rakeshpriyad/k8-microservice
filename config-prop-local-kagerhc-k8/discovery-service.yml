@@ -1,0 +1,20 @@
+#https://github.com/luizkowalski/microservices-netflix-sample/blob/master/contacts/src/main/resources/application.yml
+server:
+  port: 8761
+
+eureka:
+  instance:
+    hostname: localhost
+  # standalone mode
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+management:
+  security:
+    enabled: false
+spring:
+  boot:
+    admin:
+      context-path: /admin  #A different context path for Spring boot admin server has been provided avoiding conflict with eureka
