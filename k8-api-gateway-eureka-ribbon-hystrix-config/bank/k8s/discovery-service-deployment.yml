@@ -1,0 +1,37 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: discovery-service
+  labels:
+    name: discovery-service
+spec:
+  ports:
+    - nodePort: 30167
+      port: 8761      
+      targetPort: 8761  
+      protocol: TCP
+  selector:           
+    app: discovery-service
+  type: NodePort
+
+---
+apiVersion: apps/v1 
+kind: Deployment    
+metadata:              
+  name: discovery-service
+spec:                
+  selector:         
+    matchLabels:
+      app: discovery-service
+  replicas: 1 # more container takes more memory        
+  template:
+    metadata:
+      labels:        
+        app: discovery-service
+    spec:
+      containers:
+        - name: discovery-service
+          image: rkp/discovery-service:1.0
+          ports:
+            - containerPort: 8761                
+        

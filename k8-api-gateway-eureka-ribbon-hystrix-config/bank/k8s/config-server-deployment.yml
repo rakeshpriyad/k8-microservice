@@ -1,0 +1,36 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: config-server
+  labels:
+    name: config-server
+spec:
+  ports:
+    - nodePort: 30169
+      port: 8888      
+      targetPort: 8888  
+      protocol: TCP
+  selector:           
+    app: config-server
+  type: NodePort       
+
+---
+apiVersion: apps/v1 
+kind: Deployment    
+metadata:              
+  name: config-server
+spec:                
+  selector:         
+    matchLabels:
+      app: config-server
+  replicas: 1
+  template:
+    metadata:
+      labels:        
+        app: config-server
+    spec:
+      containers:
+        - name: config-server
+          image: rkp/config-server:1.0
+          ports:
+            - containerPort: 8888                
