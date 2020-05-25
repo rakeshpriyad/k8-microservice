@@ -46,6 +46,12 @@
 			<version>${spring-cloud.version}</version>
         </dependency>
 		
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-config</artifactId>
+			<version>${spring-cloud.version}</version>
+		</dependency>
+		
         <!-- Third parties -->
         <dependency>
             <groupId>mysql</groupId>

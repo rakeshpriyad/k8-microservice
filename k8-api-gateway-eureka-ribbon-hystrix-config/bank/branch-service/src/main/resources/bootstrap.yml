@@ -1,3 +1,9 @@
 spring:
   application:
     name: branch-service
+---
+spring:
+  profiles: docker
+  cloud:
+    config:
+      uri: http://config-server:8888
