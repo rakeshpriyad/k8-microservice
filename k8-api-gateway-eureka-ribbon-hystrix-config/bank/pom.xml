@@ -15,6 +15,7 @@
         <docker.image.dockerfile.dir>${basedir}/../docker</docker.image.dockerfile.dir>
 		<spring-boot.version>2.2.1.RELEASE</spring-boot.version>
 		<spring-cloud.version>2.2.1.RELEASE</spring-cloud.version>
+		<!--<spring-cloud.version>Hoxton.RELEASE</spring-cloud.version>-->
         <maven-surefire-plugin.version>2.22.0</maven-surefire-plugin.version>
     </properties>
 

@@ -1,3 +1,13 @@
+#start zipkin server
+
+cd customer-service
+cd zipkin
+java -jar zipkin-server-2.12.9-exec.jar
+
+http://localhost:9411/zipkin/
+http://localhost:8082/swagger-ui.html
+
+
 Open powershell
 minikube start
 minikube docker-env

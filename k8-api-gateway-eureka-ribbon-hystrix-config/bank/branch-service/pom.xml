@@ -14,6 +14,7 @@
 
     <properties>
         <dockerImagePrefix>bnk</dockerImagePrefix>
+        <spring-cloud.version>2.2.1.RELEASE</spring-cloud.version>
     </properties>
 
 	<dependencies>

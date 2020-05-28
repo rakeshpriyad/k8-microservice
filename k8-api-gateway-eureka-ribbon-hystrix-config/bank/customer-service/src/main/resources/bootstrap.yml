@@ -6,8 +6,12 @@ spring:
     name: customer-service
   cloud:
     config:
-      #enabled: false
       uri: http://localhost:8888
+  zipkin:
+    baseUrl: http://localhost:9411/zipkin/
+  sleuth:
+    sampler:
+    probability: 1
 
 ---
 spring:
