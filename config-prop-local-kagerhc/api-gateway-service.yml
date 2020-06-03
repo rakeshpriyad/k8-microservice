@@ -4,7 +4,10 @@ server:
 spring:      
   data:
     mongodb:
-      uri: mongodb://localhost:27017/api_gateway
+      #uri: mongodb://localhost:27017/api_gateway
+      database: api_gateway
+      port: 27017
+      host: localhost
 
 zuul:
   ignoredServices: '*'
