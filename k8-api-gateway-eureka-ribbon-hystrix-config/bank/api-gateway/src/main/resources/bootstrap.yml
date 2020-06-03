@@ -8,6 +8,11 @@ spring:
     config:
     #enabled: false
       uri: http://localhost:8888
+
+  data:
+    mongodb:
+      port: 27017
+      host: localhost
 ---
 spring:
   profiles: docker
