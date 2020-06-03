@@ -19,3 +19,4 @@ spring:
     mongodb:
       port: 27017
       host: localhost
+      uri: mongodb://localhost:27017/api_gateway
