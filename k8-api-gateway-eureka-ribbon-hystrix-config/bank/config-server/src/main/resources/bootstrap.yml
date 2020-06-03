@@ -10,4 +10,4 @@ spring:
       server:
         git:
           uri: https://github.com/rakeshpriyad/k8-microservice.git
-          searchPaths: k8-api-gateway-eureka-ribbon-hystrix-config/bank/config-server-properties-local
+          searchPaths: config-prop-local-kagerhc

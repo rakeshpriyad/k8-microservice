@@ -1,6 +1,11 @@
 server:
   port: 8080
-  
+
+spring:      
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/api_gateway
+	  
 zuul:
   ignoredServices: '*'
   routes:
@@ -13,8 +18,3 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
-	  
-spring:      
-  data:
-    mongodb:
-      uri: mongodb://localhost:27017/api_gateway
