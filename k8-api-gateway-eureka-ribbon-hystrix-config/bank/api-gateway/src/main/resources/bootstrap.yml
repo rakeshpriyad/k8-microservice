@@ -9,11 +9,7 @@ spring:
     #enabled: false
       uri: http://localhost:8888
 
-  data:
-    mongodb:
-      port: 27017
-      host: localhost
-      uri: mongodb://localhost:27017/api_gateway
+
 ---
 spring:
   profiles: docker
