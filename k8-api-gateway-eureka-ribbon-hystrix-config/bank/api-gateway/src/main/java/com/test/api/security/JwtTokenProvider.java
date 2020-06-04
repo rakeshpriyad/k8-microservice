@@ -1,7 +1,7 @@
 package com.test.api.security;
 
 import com.test.api.dto.JwtToken;
-import com.test.api.dto.MongoUserDetails;
+import com.test.api.dto.DBUserDetails;
 import com.test.api.repository.JwtTokenRepository;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;
@@ -78,7 +78,7 @@ public class JwtTokenProvider {
     public UserDetails getUserDetails(String token) {
         String userName =  getUsername(token);
         List<String> roleList = getRoleList(token);
-        UserDetails userDetails = new MongoUserDetails(userName,roleList.toArray(new String[roleList.size()]));
+        UserDetails userDetails = new DBUserDetails(userName,roleList.toArray(new String[roleList.size()]));
         return userDetails;
     }
     public List<String> getRoleList(String token) {

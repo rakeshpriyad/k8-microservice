@@ -13,17 +13,12 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
-import org.springframework.data.mongodb.repository.config.EnableMongoRepositories;
-import org.springframework.data.mongodb.repository.config.EnableReactiveMongoRepositories;
 
-// @EnableDiscoveryClient
-// @EnableZuulProxy
-// @SpringBootApplication
+@EnableZuulProxy
 @SpringBootApplication
 @EnableEurekaClient
 @EnableHystrixDashboard
 @EnableCircuitBreaker
-@EnableMongoRepositories//(basePackages = "org.test.api.repository")
 public class ApiGatewayApplication {
 
     public static void main(String[] args) {

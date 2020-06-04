@@ -1,11 +1,17 @@
 package com.test.api.dto;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import javax.persistence.*;
 
-@Document
+@Entity
+@Table(name = "users")
 public class JwtToken {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    Integer id;
+
+
+
+    @Column(name = "token")
     private String token;
 
     public JwtToken(String token) {
@@ -21,5 +27,12 @@ public class JwtToken {
 
     public void setToken(String token) {
         this.token = token;
+    }
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
     }
 }

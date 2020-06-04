@@ -10,7 +10,7 @@ import java.util.Set;
 @Table(name = "users")
 public class User {
 
-    @javax.persistence.Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 

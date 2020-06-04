@@ -1,12 +1,10 @@
 package com.test.api.security;
 
-import com.test.api.dto.MongoUserDetails;
+import com.test.api.dto.DBUserDetails;
 import com.test.api.dto.Role;
 import com.test.api.dto.User;
-import com.test.api.exception.CustomException;
 import com.test.api.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
@@ -46,7 +44,7 @@ public class UserService implements UserDetailsService{
             authorities[count] = "ROLE_"+role.getRole();
             count++;
         }
-        MongoUserDetails userDetails = new MongoUserDetails(user.getEmail(),user.getPassword(),user.getActive(),
+        DBUserDetails userDetails = new DBUserDetails(user.getEmail(),user.getPassword(),user.getActive(),
                 user.isLoacked(), user.isExpired(),user.isEnabled(),authorities);
         return userDetails;
     }

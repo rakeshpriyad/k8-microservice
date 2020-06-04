@@ -6,7 +6,7 @@
 		<groupId>com.test.bank</groupId>
 	    <artifactId>k8-api-gateway-eureka-ribbon-hystrix-config</artifactId>
 		<version>1.1</version>
-		<relativePath /> 
+
 	</parent>
 	
 	
@@ -17,12 +17,17 @@
 
 	<properties>
 		<spring-cloud.version>2.2.1.RELEASE</spring-cloud.version>
+		<io.fabric8.docker.version>0.33.0</io.fabric8.docker.version>
+		<DOCKER_USERNAME>DOCKER_U</DOCKER_USERNAME>
+		<DOCKER_PASSWORD>DOCKER_P</DOCKER_PASSWORD>
+		<git.commit.id>1</git.commit.id>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-config-server</artifactId>
 			<version>${spring-cloud.version}</version>
+
 		</dependency>
 
 		<dependency>
@@ -67,7 +72,7 @@
 							<images>
 								<image>
 									<alias>${project.artifactId}</alias>
-									<name>dhananjay12/${project.artifactId}</name>
+									<name>rakeshpriyad/${project.artifactId}</name>
 									<build>
 										<tags>
 											<tag>${git.commit.id}</tag>
