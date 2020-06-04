@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.test.cs.model;
+package com.test.branch.model;
 
 import javax.persistence.*;
 

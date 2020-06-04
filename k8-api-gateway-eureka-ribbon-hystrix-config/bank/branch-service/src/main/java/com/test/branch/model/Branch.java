@@ -1,4 +1,4 @@
-package com.test.cs.model;
+package com.test.branch.model;
 
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;

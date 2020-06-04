@@ -1,4 +1,4 @@
-package com.test.cs.model;
+package com.test.branch.model;
 
 import java.util.List;
 import java.util.Optional;

@@ -1,10 +1,10 @@
-package com.test.cs.controller;
+package com.test.branch.controller;
 
 
 import javax.validation.Valid;
 
-import com.test.cs.model.EmpRepository;
-import com.test.cs.model.Employee;
+import com.test.branch.model.EmpRepository;
+import com.test.branch.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;

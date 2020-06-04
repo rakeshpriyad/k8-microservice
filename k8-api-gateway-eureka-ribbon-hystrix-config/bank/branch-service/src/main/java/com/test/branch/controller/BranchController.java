@@ -1,8 +1,8 @@
-package com.test.cs.controller;
+package com.test.branch.controller;
 
-import com.test.cs.model.Branch;
-import com.test.cs.model.BranchRepository;
-import com.test.cs.model.Employee;
+import com.test.branch.model.Branch;
+import com.test.branch.model.BranchRepository;
+import com.test.branch.model.Employee;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -13,18 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.test.cs.model;
+package com.test.branch.controller;
 
-import org.springframework.data.jpa.repository.JpaRepository;
+import lombok.Data;
 
 /**
- * Repository class for <code>Owner</code> domain objects All method names are compliant with Spring Data naming
- * conventions so this interface can easily be extended for Spring Data See here: http://static.springsource.org/spring-data/jpa/docs/current/reference/html/jpa.repositories.html#jpa.query-methods.query-creation
- *
- * @author Ken Krebs
- * @author Juergen Hoeller
- * @author Sam Brannen
- * @author Michael Isvy
- * @author Maciej Szarlinski
+ * @author mszarlinski@bravurasolutions.com on 2016-12-05.
  */
-public interface EmpRepository extends JpaRepository<Employee, Integer> { }
+@Data
+public class BranchRequest {
+    private int id;
+    private String name;
+    private String address;
+
+}

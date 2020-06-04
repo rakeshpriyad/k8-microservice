@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.test.cs.controller;
+package com.test.branch.controller;
 
-import com.test.cs.model.Address;
-import com.test.cs.model.Branch;
+import com.test.branch.model.Branch;
+import com.test.branch.model.Address;
 import lombok.Data;
 
 import java.time.LocalDate;

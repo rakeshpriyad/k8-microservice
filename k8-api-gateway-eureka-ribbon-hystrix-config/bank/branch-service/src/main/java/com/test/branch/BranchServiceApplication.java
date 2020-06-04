@@ -1,4 +1,4 @@
-package com.test.cs;
+package com.test.branch;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

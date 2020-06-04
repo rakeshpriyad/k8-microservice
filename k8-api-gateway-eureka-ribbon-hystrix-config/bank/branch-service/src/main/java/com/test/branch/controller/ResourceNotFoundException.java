@@ -1,4 +1,4 @@
-package com.test.cs.controller;
+package com.test.branch.controller;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
