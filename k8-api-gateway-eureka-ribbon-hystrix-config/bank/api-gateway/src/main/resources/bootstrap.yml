@@ -6,10 +6,12 @@ spring:
     name: api-gateway-service
   cloud:
     config:
+      debug: true
       uri: http://localhost:8888
 
 
 ---
+
 spring:
   profiles: docker
   cloud:

@@ -5,7 +5,6 @@ server:
 #  data:
 #    mongodb:
       #uri: mongodb://localhost:27017/api_gateway
-	  
 #      username: root
 #      password: root
 #      database: api_gateway
