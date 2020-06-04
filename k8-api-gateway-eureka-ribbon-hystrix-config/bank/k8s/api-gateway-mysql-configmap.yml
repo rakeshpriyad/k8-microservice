@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: api-gateway-db-conf
+data:
+ host: api-gateway-mysql
+ name: api-gateway-service
