@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
 
-@Controller
+@RestController
 @RequestMapping("/api")
 public class LoginController {
 
@@ -22,7 +22,6 @@ public class LoginController {
 
     @CrossOrigin("*")
     @PostMapping("/signin")
-    @ResponseBody
     public ResponseEntity<AuthResponse> login(@RequestBody LoginRequest loginRequest) {
         String token = iLoginService.login(loginRequest.getUsername(),loginRequest.getPassword());
         HttpHeaders headers = new HttpHeaders();
@@ -40,7 +39,6 @@ public class LoginController {
     }
     @CrossOrigin("*")
     @PostMapping("/signout")
-    @ResponseBody
     public ResponseEntity<AuthResponse> logout (@RequestHeader(value="Authorization") String token) {
         HttpHeaders headers = new HttpHeaders();
       if (iLoginService.logout(token)) {
@@ -57,7 +55,6 @@ public class LoginController {
      * if request reach here it means it is a valid token.
      */
     @PostMapping("/valid/token")
-    @ResponseBody
     public Boolean isValidToken (@RequestHeader(value="Authorization") String token) {
         return true;
     }
@@ -65,7 +62,6 @@ public class LoginController {
 
     @PostMapping("/signin/token")
     @CrossOrigin("*")
-    @ResponseBody
     public ResponseEntity<AuthResponse> createNewToken (@RequestHeader(value="Authorization") String token) {
         String newToken = iLoginService.createNewToken(token);
         HttpHeaders headers = new HttpHeaders();

@@ -1,10 +1,16 @@
 package com.test.api.dto;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "role")
 public class Role {
+
+    @javax.persistence.Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
+
+    @Column(name = "role")
     private String role;
 
     public Integer getId() {

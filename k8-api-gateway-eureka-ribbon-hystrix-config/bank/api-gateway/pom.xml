@@ -91,10 +91,15 @@
             <artifactId>spring-boot-starter-security</artifactId>
             <version>${spring-cloud.version}</version>
         </dependency>
-        <dependency>
+        <!--<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-mongodb</artifactId>
             <version>2.2.2.RELEASE</version>
+        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>${spring-boot.version}</version>
         </dependency>
         <dependency>
             <groupId>io.jsonwebtoken</groupId>
@@ -170,11 +175,7 @@
                     </execution>
                 </executions>
             </plugin>
-           <!-- <plugin>
-                <groupId>io.fabric8</groupId>
-                <artifactId>docker-maven-plugin</artifactId>
-                <version>0.20.0</version>
-            </plugin>-->
+
         </plugins>
     </build>
 

@@ -1,38 +1,52 @@
 package com.test.api.dto;
 
-import org.springframework.data.annotation.Id;
-import org.springframework.data.mongodb.core.mapping.Document;
 
+import javax.persistence.*;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotEmpty;
 import java.util.Set;
 
-@Document("user")
+@Entity
+@Table(name = "users")
 public class User {
-    @Id
-    private String id;
+
+    @javax.persistence.Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer id;
+
+    @Column(name = "email")
     @Email(message = "*Please provide a valid email")
     @NotEmpty(message = "*Please provide an email")
     private String email;
+
+    @Column(name = "password")
     @NotEmpty(message = "*Please provide your name")
     private String password;
+
+    @Column(name = "name")
     @NotEmpty(message = "*Please provide your name")
     private String name;
+
+
+    @Column(name = "lastName")
     @NotEmpty(message = "*Please provide your last name")
     private String lastName;
+
+    @Column(name = "active")
     private Integer active=1;
+
+    @Column(name = "isLoacked")
     private boolean isLoacked=false;
+
+    @Column(name = "isExpired")
     private boolean isExpired=false;
+
+    @Column(name = "isEnabled")
     private boolean isEnabled=true;
+
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "users")
     private Set<Role> role;
 
-    public String getId() {
-        return id;
-    }
-
-    public void setId(String id) {
-        this.id = id;
-    }
 
     public String getEmail() {
         return email;

@@ -19,3 +19,8 @@ spring:
   cloud:
     config:
       uri: http://config-server:8888
+  zipkin:
+    baseUrl: http://zipkin-server:9411/zipkin/
+  sleuth:
+    sampler:
+    probability: 1

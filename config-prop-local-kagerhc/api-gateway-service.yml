@@ -1,20 +1,39 @@
 server:
   port: 8080
 
-spring:      
-  data:
-    mongodb:
+#spring:      
+#  data:
+#    mongodb:
       #uri: mongodb://localhost:27017/api_gateway
-      database: api_gateway
-      port: 27017
-      host: localhost
+	  
+#      username: root
+#      password: root
+#      database: api_gateway
+#      port: 27017
+#      host: localhost
+#      authentication-database: admin
 
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/bnkmicroservice?allowPublicKeyRetrieval=true&useSSL=FALSE
+        username: root
+        password: root
+        hikari:
+            initialization-fail-timeout: 0        
+    jpa:
+        database-platform: org.hibernate.dialect.MySQL5Dialect
+        generate-ddl: true
+        show-sql: true
+        hibernate:
+            ddl-auto: create
+			
 zuul:
   ignoredServices: '*'
   routes:
     customer-service:
-      path: /api/customer-service/**
-      url: http://customer-service:8082
+      path: /customer-service/**
+      url: http://localhost:8082
 
 # To enable eureka client
 eureka:
