@@ -13,6 +13,7 @@ import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboard;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 
 @EnableZuulProxy
 @SpringBootApplication
@@ -22,7 +23,11 @@ import org.springframework.cloud.netflix.hystrix.dashboard.EnableHystrixDashboar
 public class ApiGatewayApplication {
 
     public static void main(String[] args) {
+
         SpringApplication.run(ApiGatewayApplication.class, args);
+        BCryptPasswordEncoder b = new BCryptPasswordEncoder();
+        System.out.println(b.encode("admin"));
+
     }
     @Bean
     public PreFilter preFilter() {

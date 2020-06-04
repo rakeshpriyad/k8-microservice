@@ -1,123 +1,148 @@
 package com.test.api.dto;
 
-
-import javax.persistence.*;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotEmpty;
+import java.util.HashSet;
 import java.util.Set;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
+import javax.persistence.Table;
+
 @Entity
-@Table(name = "users")
+@Table(name="APP_USER")
 public class User {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+	@Id @GeneratedValue(strategy=GenerationType.IDENTITY)
+	private int id;
 
-    @Column(name = "email")
-    @Email(message = "*Please provide a valid email")
-    @NotEmpty(message = "*Please provide an email")
-    private String email;
+	@Column(name="SSO_ID", unique=true, nullable=false)
+	private String ssoId;
+	
+	@Column(name="PASSWORD", nullable=false)
+	private String password;
+		
+	@Column(name="FIRST_NAME", nullable=false)
+	private String firstName;
 
-    @Column(name = "password")
-    @NotEmpty(message = "*Please provide your name")
-    private String password;
+	@Column(name="LAST_NAME", nullable=false)
+	private String lastName;
 
-    @Column(name = "name")
-    @NotEmpty(message = "*Please provide your name")
-    private String name;
+	@Column(name="EMAIL", nullable=false)
+	private String email;
 
+	@Column(name="STATE", nullable=false)
+	private String state=State.ACTIVE.getState();
 
-    @Column(name = "lastName")
-    @NotEmpty(message = "*Please provide your last name")
-    private String lastName;
+	@ManyToMany(fetch = FetchType.EAGER)
+	@JoinTable(name = "APP_USER_USER_PROFILE", 
+             joinColumns = { @JoinColumn(name = "USER_ID") }, 
+             inverseJoinColumns = { @JoinColumn(name = "USER_PROFILE_ID") })
+	private Set<UserProfile> userProfiles = new HashSet<UserProfile>();
 
-    @Column(name = "active")
-    private Integer active=1;
+	public int getId() {
+		return id;
+	}
 
-    @Column(name = "isLoacked")
-    private boolean isLoacked=false;
+	public void setId(int id) {
+		this.id = id;
+	}
 
-    @Column(name = "isExpired")
-    private boolean isExpired=false;
+	public String getSsoId() {
+		return ssoId;
+	}
 
-    @Column(name = "isEnabled")
-    private boolean isEnabled=true;
+	public void setSsoId(String ssoId) {
+		this.ssoId = ssoId;
+	}
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "users")
-    private Set<Role> role;
+	public String getPassword() {
+		return password;
+	}
 
+	public void setPassword(String password) {
+		this.password = password;
+	}
 
-    public String getEmail() {
-        return email;
-    }
+	public String getFirstName() {
+		return firstName;
+	}
 
-    public void setEmail(String email) {
-        this.email = email;
-    }
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
 
-    public String getPassword() {
-        return password;
-    }
+	public String getLastName() {
+		return lastName;
+	}
 
-    public void setPassword(String password) {
-        this.password = password;
-    }
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
 
-    public String getName() {
-        return name;
-    }
+	public String getEmail() {
+		return email;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public void setEmail(String email) {
+		this.email = email;
+	}
 
-    public String getLastName() {
-        return lastName;
-    }
+	public String getState() {
+		return state;
+	}
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
+	public void setState(String state) {
+		this.state = state;
+	}
 
-    public Integer getActive() {
-        return active;
-    }
+	public Set<UserProfile> getUserProfiles() {
+		return userProfiles;
+	}
 
-    public void setActive(Integer active) {
-        this.active = active;
-    }
+	public void setUserProfiles(Set<UserProfile> userProfiles) {
+		this.userProfiles = userProfiles;
+	}
 
-    public Set<Role> getRole() {
-        return role;
-    }
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + id;
+		result = prime * result + ((ssoId == null) ? 0 : ssoId.hashCode());
+		return result;
+	}
 
-    public void setRole(Set<Role> role) {
-        this.role = role;
-    }
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (!(obj instanceof User))
+			return false;
+		User other = (User) obj;
+		if (id != other.id)
+			return false;
+		if (ssoId == null) {
+			if (other.ssoId != null)
+				return false;
+		} else if (!ssoId.equals(other.ssoId))
+			return false;
+		return true;
+	}
 
-    public boolean isLoacked() {
-        return isLoacked;
-    }
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", ssoId=" + ssoId + ", password=" + password
+				+ ", firstName=" + firstName + ", lastName=" + lastName
+				+ ", email=" + email + ", state=" + state + ", userProfiles=" + userProfiles +"]";
+	}
 
-    public void setLoacked(boolean loacked) {
-        isLoacked = loacked;
-    }
-
-    public boolean isExpired() {
-        return isExpired;
-    }
-
-    public void setExpired(boolean expired) {
-        isExpired = expired;
-    }
-
-    public boolean isEnabled() {
-        return isEnabled;
-    }
-
-    public void setEnabled(boolean enabled) {
-        isEnabled = enabled;
-    }
-
+	
 }

@@ -10,7 +10,15 @@ http://localhost:8080/api/signin
 
 with values:
 {
-  "username": "username",
-  "password":"password"
+  "username": "admin",
+  "password":"admin"
   
 }
+
+
+in DB password should be encrypted. Using password encoder
+
+
+ BCryptPasswordEncoder b = new BCryptPasswordEncoder();
+        System.out.println(b.encode("admin"));
+

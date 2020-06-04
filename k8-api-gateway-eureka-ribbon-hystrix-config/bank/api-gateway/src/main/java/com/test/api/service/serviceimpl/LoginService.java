@@ -1,8 +1,8 @@
 package com.test.api.service.serviceimpl;
 
 import com.test.api.dto.JwtToken;
-import com.test.api.dto.Role;
 import com.test.api.dto.User;
+import com.test.api.dto.UserProfile;
 import com.test.api.exception.CustomException;
 import com.test.api.repository.JwtTokenRepository;
 import com.test.api.repository.UserRepository;
@@ -16,10 +16,8 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
-import java.util.HashSet;
 import java.util.List;
 import java.util.Objects;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
@@ -40,27 +38,19 @@ public class LoginService implements ILoginService {
         try {
             authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(username,
                     password));
-            User user = userRepository.findByEmail(username);
-            user = new User();
-            user.setEmail("username");
-            user.setPassword("password");
-            Role r = new Role();;
-            r.setRole("Admin");
+            User user = userRepository.findBySSoId(username).get();
 
-            Set<Role> roles = new HashSet<>();
-            roles.add(r);
-            user.setRole(roles);
-
-            if (user == null || user.getRole() == null || user.getRole().isEmpty()) {
+            if (user == null ) {
                 throw new CustomException("Invalid username or password.", HttpStatus.UNAUTHORIZED);
             }
             //NOTE: normally we dont need to add "ROLE_" prefix. Spring does automatically for us.
             //Since we are using custom token using JWT we should add ROLE_ prefix
-            String token = jwtTokenProvider.createToken(username, user.getRole().stream()
-                    .map((Role role) -> "ROLE_" + role.getRole()).filter(Objects::nonNull).collect(Collectors.toList()));
+            String token = jwtTokenProvider.createToken(username, user.getUserProfiles().stream()
+                    .map((UserProfile userProfile) -> "ROLE_" + userProfile.getType()).filter(Objects::nonNull).collect(Collectors.toList()));
             return token;
 
         } catch (AuthenticationException e) {
+            e.printStackTrace();
             throw new CustomException("Invalid username or password.", HttpStatus.UNAUTHORIZED);
         }
     }
