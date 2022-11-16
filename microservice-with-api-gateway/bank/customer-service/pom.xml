@@ -13,7 +13,7 @@
 	<description>Bank Customers Service</description>
 
     <properties>
-        <jackson.version>2.9.8</jackson.version>
+        <jackson.version>2.12.7.1</jackson.version>
     </properties>
 
 	<dependencies>
